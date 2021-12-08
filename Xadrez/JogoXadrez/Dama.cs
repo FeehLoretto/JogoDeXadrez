@@ -79,6 +79,7 @@ namespace jogoXadrez
                     break;
                 }
                 pos.Linha = pos.Linha - 1;
+                pos.Coluna = pos.Coluna + 1;
             }
 
             //Sudeste
@@ -90,6 +91,7 @@ namespace jogoXadrez
                 {
                     break;
                 }
+                pos.Linha = pos.Linha + 1;
                 pos.Coluna = pos.Coluna + 1;
             }
 
@@ -103,6 +105,7 @@ namespace jogoXadrez
                     break;
                 }
                 pos.Linha = pos.Linha + 1;
+                pos.Coluna = pos.Coluna - 1;
             }
 
             //Noroeste
@@ -114,6 +117,7 @@ namespace jogoXadrez
                 {
                     break;
                 }
+                pos.Linha = pos.Linha - 1;
                 pos.Coluna = pos.Coluna - 1;
             }
 
