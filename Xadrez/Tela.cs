@@ -14,14 +14,25 @@ namespace Xadrez
             ImprimirPecasCapturadas(partida);
             Console.WriteLine();
             Console.WriteLine("Turno: " + partida.Turno);
-            Console.WriteLine("Aguardando jogada: " + partida.JogadorAtual);
-            if(partida.Xeque)
+            if (!partida.Terminada)
             {
-                ConsoleColor aux = Console.ForegroundColor;
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("XEQUE!");
-                Console.ForegroundColor = aux;
-            }
+                Console.WriteLine("Aguardando jogada: " + partida.JogadorAtual);
+                if (partida.Xeque)
+                {
+                    ConsoleColor aux = Console.ForegroundColor;
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("XEQUE!");
+                    Console.ForegroundColor = aux;
+                } 
+            } else
+                {
+                    ConsoleColor aux = Console.ForegroundColor;
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("XEQUE-MATE!");
+                    Console.ForegroundColor = aux;
+                    Console.WriteLine("Vencedor(a): " + partida.JogadorAtual);
+                }
+            
             Console.WriteLine();
         }
 
